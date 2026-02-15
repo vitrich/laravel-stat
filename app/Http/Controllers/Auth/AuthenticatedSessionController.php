@@ -28,8 +28,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        // Редирект на главную вместо dashboard
-        return redirect()->intended(route('home'));
+        return redirect()->intended(route('dashboard', absolute: false));
     }
 
     /**
@@ -43,6 +42,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('home');
+        return redirect('/');
     }
 }
