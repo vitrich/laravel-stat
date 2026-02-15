@@ -15,8 +15,8 @@ use App\Http\Controllers\StatisticsController;
 // Главная страница
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-<<<<<<< HEAD
-=======
+
+
 // Новости
 Route::get('/news', function () {
     return view('news');
@@ -86,6 +86,6 @@ Route::middleware(['auth', 'teacher'])->prefix('statistics')->group(function () 
     })->name('stats.analytics');
 });
 
->>>>>>> a351b8ff5bfaa518e9cb441ecdbb953d0f9e538b
+
 // Аутентификация (Laravel Breeze добавит свои маршруты)
 require __DIR__.'/auth.php';

@@ -2,37 +2,22 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
 use App\Models\Lesson;
+use App\Models\LessonTask;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     /**
-     * Главная страница с списком уроков
+     * Главная страница со списком уроков и статусами для студента.
      */
-    public function index()
-    {
-        // Получаем активные уроки, отсортированные по дате
-        $lessons = Lesson::where('is_active', true)
-            ->orderBy('date', 'desc')
-            ->get();
-
-        return view('home', compact('lessons'));
-=======
-use Illuminate\Http\Request;
-use App\Models\Lesson;
-use App\Models\LessonTask;
-
-class HomeController extends Controller
-{
     public function index(Request $request)
     {
         $context = [];
 
         if ($request->user()) {
             $student = $request->user()->student;
-            
+
             if ($student) {
                 $lessons = Lesson::where('is_active', true)
                     ->orderBy('date')
@@ -63,7 +48,13 @@ class HomeController extends Controller
             }
         }
 
+        // Если пользователь не авторизован, просто покажем активные уроки
+        if (empty($context['lessons'])) {
+            $context['lessons'] = Lesson::where('is_active', true)
+                ->orderBy('date')
+                ->get();
+        }
+
         return view('home', $context);
->>>>>>> a351b8ff5bfaa518e9cb441ecdbb953d0f9e538b
     }
 }
