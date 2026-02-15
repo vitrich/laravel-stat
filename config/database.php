@@ -62,6 +62,15 @@ return [
                 (PHP_VERSION_ID >= 80500 ? \Pdo\Mysql::ATTR_SSL_CA : \PDO::MYSQL_ATTR_SSL_CA) => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
+        'django' => [
+            'driver' => 'mysql',
+            'host' => env('DJANGO_DB_HOST', '127.0.0.1'),
+            'database' => env('DJANGO_DB_DATABASE', 'forge'),
+            'username' => env('DJANGO_DB_USERNAME', 'forge'),
+            'password' => env('DJANGO_DB_PASSWORD', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+        ],
 
         'mariadb' => [
             'driver' => 'mariadb',
