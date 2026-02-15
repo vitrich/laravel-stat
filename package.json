@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "laravel-stat",
     "version": "1.0.0",
     "description": "Laravel educational platform for mathematics",
@@ -25,4 +26,27 @@
     "dependencies": {
         "chart.js": "^4.4.3"
     }
+=======
+  "name": "laravel-stat",
+  "version": "1.0.0",
+  "description": "Laravel educational platform for mathematics",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.7.4",
+    "bootstrap": "^5.3.3",
+    "laravel-vite-plugin": "^1.0",
+    "sass": "^1.77.6",
+    "vite": "^5.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.3"
+  }
+>>>>>>> a351b8ff5bfaa518e9cb441ecdbb953d0f9e538b
 }

@@ -1,3 +1,77 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+=======
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Общие стили */
+:root {
+    --primary-color: #21808d;
+    --secondary-color: #5e5240;
+    --success-color: #21808d;
+    --danger-color: #c0152f;
+    --warning-color: #a84b2f;
+    --info-color: #626c71;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fcfcf9;
+    color: #134252;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #1d7480;
+    border-color: #1d7480;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.lesson-card {
+    transition: transform 0.2s;
+}
+
+.lesson-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+.badge {
+    font-weight: 500;
+}
+
+.table-responsive {
+    border-radius: 8px;
+}
+
+/* Стили для статистики */
+.stats-card {
+    border-left: 4px solid var(--primary-color);
+}
+
+.score-badge {
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.score-7 { background-color: #28a745; }
+.score-6 { background-color: #5cb85c; }
+.score-5 { background-color: #17a2b8; }
+.score-4 { background-color: #ffc107; }
+.score-3 { background-color: #fd7e14; }
+.score-2 { background-color: #dc3545; }
+.score-1 { background-color: #c82333; }
+>>>>>>> a351b8ff5bfaa518e9cb441ecdbb953d0f9e538b

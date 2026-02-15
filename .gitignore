@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.log
 .DS_Store
 .env
@@ -12,13 +13,31 @@
 /.vscode
 /.zed
 /auth.json
+=======
+>>>>>>> a351b8ff5bfaa518e9cb441ecdbb953d0f9e538b
 /node_modules
 /public/build
 /public/hot
 /public/storage
 /storage/*.key
+<<<<<<< HEAD
 /storage/pail
 /vendor
 Homestead.json
 Homestead.yaml
 Thumbs.db
+=======
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+>>>>>>> a351b8ff5bfaa518e9cb441ecdbb953d0f9e538b
